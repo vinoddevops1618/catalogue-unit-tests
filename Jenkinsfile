@@ -17,19 +17,36 @@
 
 // }
 
-def configMap = [
-    project: "roboshop",
-    component: "catalogue"
-]
+// def configMap = [
+//     project: "roboshop",
+//     component: "catalogue"
+// ]
 
+// echo "Triggering the library pipeline"
+
+// if ( env.BRANCH_NAME.equalsIgnoreCase('main') ){
+//     echo "checking later"
+
+// }
+// else{
+
+//     nodejsEKSPipeline(configMap)
+
+// }
+
+
+def configMap = [
+project: "roboshop",
+component: "catalogue"
+]
 echo "Triggering the library pipeline"
 
 if ( env.BRANCH_NAME.equalsIgnoreCase('main') ){
-    echo "checking later"
-
+    configMap["jiraProject"] = "ROBO"
+    EKSMainPipeline(configMap)
 }
+
 else{
-
-    nodejsEKSPipeline(configMap)
-
+    configMap["jiraProject"] = "ROBO"
+    nodeJSERSPipeline(configMap)
 }
