@@ -1,13 +1,15 @@
 name: feature pipeline
 # Controls when the workflow will run (Triggers on every code push)
 on:
-  push:
   workflow_dispatch:
+  push:
+  
 
 jobs:
   feature-pipeline:   #job name
     if: github.ref_name != 'main'
-    uses: vinod1618/workflows/.github/workflows/node-js-feature-pipeline.yaml@main
+    uses: vinoddevops1618/workflows/.github/workflows/node-js-feature-pipeline.yaml@main
     with:
       project: 'roboshop'
       component: 'catalogue'
+    secrets: inherit
