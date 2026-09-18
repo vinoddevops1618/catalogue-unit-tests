@@ -2,7 +2,7 @@ name: feature pipeline
 # Controls when the workflow will run (Triggers on every code push)
 on:
   workflow_dispatch:
-  push:
+  #push:
   
 
 jobs:
