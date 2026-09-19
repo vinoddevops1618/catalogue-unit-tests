@@ -13,3 +13,5 @@ jobs:
       project: 'roboshop'
       component: 'catalogue'
     secrets: inherit
+    permissions:
+      statuses: write
