@@ -15,3 +15,4 @@ jobs:
     secrets: inherit
     permissions:
       statuses: write
+      contents: read      # read repo files
