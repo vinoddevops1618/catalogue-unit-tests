@@ -14,5 +14,5 @@ jobs:
       component: 'catalogue'
     secrets: inherit
     permissions:
-      statuses: write
-      contents: read      # read repo files
+      contents: read
+      statuses: write    # read repo files
